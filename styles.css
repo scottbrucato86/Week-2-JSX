@@ -175,6 +175,21 @@ body {
     background-color: #333;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.download-button.tertiary:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.download-button.tertiary:active {
+    background-color: #333;
+    color: #fff;
+}
 /* =========================
    UTILITIES: Page label
    Small fixed badge at top-center.
