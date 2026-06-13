@@ -1,9 +1,17 @@
+/* =========================
+   FOUNDATION: Global reset
+   Keeps spacing and sizing predictable.
+   ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =========================
+   LAYOUT: Page shell
+   Centers cards and sets base background + font.
+   ========================= */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +22,7 @@ body {
     padding: 20px;
 }
 
+/* Layout: row container for pricing cards */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +32,11 @@ body {
     align-items: flex-start;
 }
 
+/* =========================
+   COMPONENTS: Card structure
+   Core card blocks used by each plan.
+   ========================= */
+/* Single pricing card shell */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +48,17 @@ body {
     flex-shrink: 0;
 }
 
+/* Stacks title, price, and feature content vertically */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* =========================
+   TYPOGRAPHY: Card text styles
+   Text hierarchy for title, price, and body copy.
+   ========================= */
+/* Plan name (Hobby/Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +67,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row (amount + optional period) */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +75,42 @@ body {
     align-items: baseline;
 }
 
+/* Main price value (e.g., Free, $20) */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Small price suffix (e.g., /mo.) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* =========================
+   COMPONENTS: Feature list
+   Supporting text and list rows inside each card.
+   ========================= */
+/* Spacing block for text and list inside each card */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Intro text above feature list */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Removes default bullet style from list */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* One feature row in the list */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +119,7 @@ body {
     color: #26251e;
 }
 
+/* Check icon before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +127,10 @@ body {
     font-weight: 400;
 }
 
+/* =========================
+   COMPONENTS: Buttons
+   Base CTA style and the Pro variation.
+   ========================= */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,27 +145,40 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* =========================
+   STATES: Button interactions
+   Hover and active feedback for usability.
+   ========================= */
+/* Shared hover style for default (secondary) button */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Shared pressed style for default (secondary) button */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Dark style for highlighted CTA button */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Hover style for primary button */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Pressed style for primary button */
 .download-button.primary:active {
     background-color: #333;
 }
 
+/* =========================
+   UTILITIES: Page label
+   Small fixed badge at top-center.
+   ========================= */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +192,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Emphasizes the bold text inside the label */
 .page-label strong {
     color: #333;
 }
